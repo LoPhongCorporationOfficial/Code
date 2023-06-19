@@ -3,7 +3,6 @@
 #include <iomanip>
 #include <string>
 
-// Hàm đọc thông tin về CPU
 void GetCPUInfo()
 {
     SYSTEM_INFO sysinfo;
@@ -34,7 +33,6 @@ void GetCPUInfo()
     std::cout << "Page size: " << sysinfo.dwPageSize << " bytes" << std::endl;
 }
 
-// Hàm đọc thông tin về RAM
 void GetMemoryInfo()
 {
     MEMORYSTATUSEX memStatus;
@@ -46,7 +44,6 @@ void GetMemoryInfo()
     std::cout << "Available physical memory: " << memStatus.ullAvailPhys / 1024 / 1024 << " MB" << std::endl;
 }
 
-// Hàm đọc thông tin về ổ đĩa
 void GetDriveInfo()
 {
     ULARGE_INTEGER freeBytesAvailableToCaller, totalNumberOfBytes, totalNumberOfFreeBytes;
@@ -57,7 +54,6 @@ void GetDriveInfo()
     std::cout << "Free space available on drive: " << freeBytesAvailableToCaller.QuadPart / 1024 / 1024 << " MB" << std::endl;
 }
 
-// Hàm đọc thông tin về hệ điều hành
 void GetOSInfo()
 {
     OSVERSIONINFOEX osVersion;
